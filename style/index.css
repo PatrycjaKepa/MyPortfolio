@@ -1,0 +1,134 @@
+.main-background {
+    background-image: linear-gradient(to left, rgba(152, 191, 255,0.1), rgba(228,187,151,0.1));
+}
+
+.gradient-background {
+    background: linear-gradient(-45deg, rgba(152, 191, 255,1) 11.2%, rgba(228,187,151,1) 91.1% );
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    border: 1px var(--bord-col) solid;
+    border-radius: 10px;
+}
+
+.border {
+    border-radius: 10px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-image-source: linear-gradient(to bottom, rgb(152, 191, 255), rgba(228,187,151,1));
+}
+
+html {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+--text-col: white;
+--bg-col: #252525;
+--bg-btn: #252525;
+--bord-col: #252525;
+
+background-color: var(--bg-col);
+}
+
+body.light {
+--text-col: #1D2F6F;
+--bg-col: white;
+--bg-btn: #1D2F6F;
+--bord-col: white;
+}
+
+.text-col {
+color: var(--text-col);
+}
+.bg-col {
+background-color: var(--bg-col);
+}
+.bord-col {
+    color: white;
+}
+
+.bg-btn {
+    background-color: var(--bg-btn);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 90px;
+}
+
+.btn {
+    color: white;
+}
+.btn:hover {
+    /* color: #98bfff; */
+    background-color: rgb(152, 191, 255, 0.2);
+}
+
+.main-container {
+    height: 90%;
+}
+
+input {
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    /* background-color: yellow; */
+    background-image: url("../icons/day.png");
+    background-size:contain;
+}
+
+input::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-col);
+    border-radius: 50px;
+}
+
+input:checked::before {
+    transform: translate(100%);
+}
+
+input:checked {
+    background-image: url("../icons/half-moon.png");
+}
