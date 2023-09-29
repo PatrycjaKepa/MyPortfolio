@@ -1,8 +1,11 @@
+.main-background {
+    background-image: linear-gradient(to left, rgba(152, 191, 255,0.1), rgba(228,187,151,0.1));
+}
 .gradient-background {
     background: linear-gradient(-45deg, rgba(152, 191, 255,1) 11.2%, rgba(228,187,151,1) 91.1% );
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    border: 1px #141204 solid;
+    border: 1px var(--bord-col) solid;
     border-radius: 10px;
 }
 
@@ -27,7 +30,6 @@
     border-right: 0;
     border-image-source: linear-gradient(to left, #98bfff, rgba(228,187,151,1));
 }
-
 .word-space{
     margin: 0;;
 }
@@ -43,17 +45,41 @@ html, body {
     margin: 0;
   }
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
+body {
+font-family: 'Montserrat', sans-serif;
+}
 
-.second-color {
-    background-color: #141204;
+body {
+--text-col: white;
+--bg-col: #252525;
+--bg-btn: #252525;
+--bord-col: #252525;
+
+background-color: var(--bg-col);
+}
+
+body.light {
+--text-col: #1D2F6F;
+--bg-col: white;
+--bg-btn: #1D2F6F;
+--bord-col: white;
+}
+
+.text-col {
+color: var(--text-col);
+}
+.bg-col {
+background-color: var(--bg-col);
+}
+.bord-col {
+    color: white;
+}
+
+.bg-btn {
+    background-color: var(--bg-btn);
 }
 
 .icon {
-    fill: white;
-    /* color: white; */
     width: 50px;
     height: 50px;
 }
@@ -75,4 +101,37 @@ h2 {
 
 .enclosure {
     background-image: linear-gradient(to left, rgba(152, 191, 255,0.1), rgba(228,187,151,0.1));
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 90px;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+    /* background-color: yellow; */
+    background-image: url(../img/day.jpg);
+    background-size:cover;
+}
+
+input::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+input:checked::before {
+    transform: translate(85%);
+}
+
+input:checked {
+    background-image: url(../img/night.jpg);
 }

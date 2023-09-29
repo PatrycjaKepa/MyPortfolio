@@ -48,6 +48,10 @@ html, body {
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
 --text-col: white;
 --bg-col: #252525;
 --bg-btn: #252525;
@@ -104,14 +108,15 @@ h2 {
 
 input {
     -webkit-appearance: none;
+    appearance: none;
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 90px;
+    height: 50px;
     border-radius: 50px;
     outline: none;
     /* background-color: yellow; */
-    background-image: url("../icons/day.png");
-    background-size:contain;
+    background-image: url(../img/day.jpg);
+    background-size:cover;
 }
 
 input::before {
@@ -119,16 +124,17 @@ input::before {
     position: absolute;
     top: 0;
     left: 0;
-    height: 40px;
-    width: 40px;
-    background-color: var(--bg-col);
+    height: 45px;
+    width: 45px;
+    background-color: white;
     border-radius: 50px;
+    margin: 3px;
 }
 
 input:checked::before {
-    transform: translate(100%);
+    transform: translate(85%);
 }
 
 input:checked {
-    background-image: url("../icons/half-moon.png");
+    background-image: url(../img/night.jpg);
 }

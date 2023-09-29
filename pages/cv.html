@@ -9,31 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container mw-100 bg-dark h-auto">
+    <div class="container mw-100 bg-col h-auto">
 
-        <div class="row align-content-center">
+        <div class="row main-background bg-btn">
+            <div class="col-8 d-flex m-3">
+                <a type="button" role="button"><img class="icon ms-3" src="../icons/home.png"></a>
+                <a href="../index.html" class="btn text-start fs-4 p-3 ms-3" role="button">Strona główna</a>
+                <a href="./projects.html" class="btn text-start fs-4 p-3 ms-3" role="button">Projekty</a>
+                <a href="./cv.html" class="btn text-start fs-4 p-3 ms-3" role="button">Moje CV</a>
+                <a href="./contact.html" class="btn text-start fs-4 p-3 ms-3" role="button">Kontakt</a>
+            </div>
+            <div class="col d-flex m-3 justify-content-end">
+                <input type="checkbox" id="mode" class="me-3">
+                <a type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/github.png"></a>
+                <a type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/linkedin.png"></a>
+                <a type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/gmail.png"></a>
+            </div>
+        </div>
+
+        <div class="row align-content-center mt-5">
             <div class="col gradient-background my-3 mx-3">
 
-                <div class="row text-white">
-                    <div class="col bg-dark ms-4 mt-4 mb-4 me-4">
+                <div class="row text-col">
+                    <div class="col bg-col ms-4 mt-4 mb-4 me-4">
                         
-                        <div class="row">
-                            <div class="col-2 d-flex flex-row">
-                                <a type="button" role="button"><img class="icon m-4" src="../icons/home.png"></a>
-                            </div>
-                            <div class="col-7 d-flex justify-content-center">
-                                <a href="../index.html" class="btn m-4 fs-4" role="button">Strona główna</a>
-                                <a href="/pages/projects.html" class="btn m-4 fs-4" role="button">Projekty</a>
-                                <a href="pages/cv.html" class="btn m-4 fs-4" role="button">Moje CV</a>
-                                <a href="pages/contact.html" class="btn m-4 fs-4" role="button">Kontakt</a>
-                            </div>
-                            <div class="col-3 d-flex flex-row justify-content-end">
-                                <a type="button" role="button"><img class="icon justify-items-end m-4" src="../icons/github.png"></a>
-                                <a type="button" role="button"><img class="icon justify-items-end m-4" src="../icons/linkedin.png"></a>
-                                <a type="button" role="button"><img class="icon justify-items-end m-4" src="../icons/gmail.png"></a>
-                            </div>
-                        </div>
-
                         <div class="row m-5">
                            <div class="col-3 p-5">LOGO</div>
                            <div class="col p-5">
@@ -121,7 +120,7 @@
             </div>
         </div>
     </div>
-
+<script src="../js/mode.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
