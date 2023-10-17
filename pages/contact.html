@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container mw-100 bg-col d-flex flex-column align-items-center">
+
+        <div class="row main-background bg-btn d-flex align-items-center">
+            <div class="col-8 d-flex m-3">
+                <a href="../index.html" type="button" role="button"><img class="icon ms-3" src="../icons/home.png"></a>
+                <a href="../index.html" class="btn text-start fs-4 p-3 ms-3" role="button">Strona główna</a>
+                <a href="../pages/projects.html" class="btn text-start fs-4 p-3 ms-3" role="button">Projekty</a>
+                <a href="../pages/cv.html" class="btn text-start fs-4 p-3 ms-3" role="button">Moje CV</a>
+                <a href="../pages/contact.html" class="btn text-start fs-4 p-3 ms-3" role="button">Kontakt</a>
+            </div>
+            <div class="col d-flex m-3 justify-content-end">
+                <input type="checkbox" id="mode" class="me-3 mode">
+                <a href="https://github.com/PatrycjaKepa" target="_blank" type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/github.png"></a>
+                <a href="https://www.linkedin.com/in/patrycja-k%C4%99pa-331a72210/" target="_blank" type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/linkedin.png"></a>
+                <a href="mailto:patrycja.kepa8200@outlook.com" target="_blank" type="button" role="button"><img class="icon justify-items-end me-3" src="../icons/email2.png"></a>
+            </div>
+        </div>
+        
+        <div class="row main-container d-flex justify-self-center align-content-center">
+            <div class="col bg-col d-flex">
+                
+                <div class="row">
+                    <div class="col m-4 d-flex justify-content-center">
+
+                        <div class="row bg-message border">
+                            <div class="col-4 m-4 d-flex flex-column">
+                                <h1 class="m-2 text-content">Porozmawiajmy !</h1>
+                                <p class="m-2 text-content">Jeśli masz do mnie jakieś pytania, lub propozycje pracy, napisz, a ja napewno ci odpowiem !</p>
+                                <label class="m-2 text-content" for="name">Twoje Imię</label>
+                                <input class="ms-2 me-3 mb-3 p-2 border-contact" type="text" name="name" class="w-50">
+                                <label class="m-2 text-content" for="email">E-mail</label>
+                                <input class="ms-2 me-3 mb-3 p-2 border-contact" type="email" name="email" class="w-50">
+                                <label class="m-2 text-content" for="message">Wiadomość</label>
+                                <textarea class="ms-3 me-3 mb-5 p-2 height-for-message border-contact" cols="40" rows="50" type="text" name="message" class="h-25 w-50"></textarea>
+                                <input class="p-3 w-50 align-self-center text-light bg-btn-message" type="button" value="Wyślij wiadomość">
+                            </div>
+
+                            <div class="col m-4 p-4 d-flex flex-column align-items-center">
+
+                                <div class="row">
+                                    <div class="col d-flex flex-column align-items-center">
+                                        <img src="../icons/mail.png" class="message-img">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="ps-3 pe-3 align-self-start"><img src="../icons/placeholder.png" class="message-icon me-2">Kraków</p>
+                                        <p class="ps-3 pe-3 align-self-start"><img src="../icons/email.png" class="message-icon me-2">patrycja.kepa8200@outlook.com</p>
+                                        <p class="ps-3 pe-3 align-self-start"><img src="../icons/telephone.png" class="message-icon me-2">459 412 769</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+<script src="../js/mode.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

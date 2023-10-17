@@ -1,39 +1,5 @@
 .main-background {
-    background-image: linear-gradient(to left, rgba(152, 191, 255,0.1), rgba(228,187,151,0.1));
-}
-
-.gradient-background {
-    background: linear-gradient(-45deg, rgba(152, 191, 255,1) 11.2%, rgba(228,187,151,1) 91.1% );
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
-    border: 1px var(--bord-col) solid;
-    border-radius: 10px;
-}
-
-.border {
-    border-radius: 10px;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.border-gradient {
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 5px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-image-source: linear-gradient(to left, rgb(152, 191, 255), rgba(228,187,151,1));
+    width: 100%;
 }
 
 html {
@@ -49,36 +15,47 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    display: flex;
 }
 
 body {
---text-col: white;
+--text-col: black;
 --bg-col: #252525;
---bg-btn: #252525;
+--bg-message: white;
+--bg-btn: #4a47d3;
 --bord-col: #252525;
 
 background-color: var(--bg-col);
 }
 
 body.light {
---text-col: #1D2F6F;
---bg-col: white;
---bg-btn: #1D2F6F;
---bord-col: white;
-}
+    --text-col: #1D2F6F;
+    --bg-col: #d6ebfa;
+    --bg-message: white;
+    --bg-btn: #4a47d3;
+    --bord-col: white;
+    }
 
 .text-col {
 color: var(--text-col);
 }
 .bg-col {
 background-color: var(--bg-col);
+padding: 0;
 }
 .bord-col {
     color: white;
+    
 }
-
+.bg-message{
+    background-color: var(--bg-message);
+    height: 60vh;
+    border: 1px white solid;
+    border-radius: 30px;
+}
 .bg-btn {
     background-color: var(--bg-btn);
+    height: 15%;
 }
 
 .icon {
@@ -93,7 +70,17 @@ h2 {
 a{
     text-decoration: none;
     color: var(--text-col);
-    font-size: 20px;
+    font-size: 30px;
+}
+a:hover {
+    color: #98bfff;
+    background-color: rgb(152, 191, 255, 0.2);
+    border: 1px rgb(152, 191, 255, 0.2) solid;
+    border-radius: 30px;
+}
+.content {
+    width: 80%;
+    height: 90vh;
 }
 a:hover {
     color: rgb(152, 191, 255);
@@ -103,7 +90,7 @@ a:hover {
     color: white;
 }
 .btn:hover {
-    /* color: #98bfff; */
+    color: #98bfff;
     background-color: rgb(152, 191, 255, 0.2);
 }
 

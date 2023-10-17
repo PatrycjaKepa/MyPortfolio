@@ -13,9 +13,24 @@ html, body {
     margin: 0;
 }
 
+.border {
+    border-radius: 20px;
+}
+.border-contact {
+    background-color: #91a5ffa8;
+    border: 1px #91a5ffa8 solid;
+    border-radius: 20px;
+    --height-for-message: 100px;
+}
+
+.height-for-message {
+    height: var(--height-for-message);
+}
+
+
 body {
-    font-family: 'Montserrat', sans-serif;
     display: flex;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -24,6 +39,7 @@ body {
 --bg-message: white;
 --bg-btn: #4a47d3;
 --bord-col: #252525;
+--bg-btn-message: #4a47d3;
 
 background-color: var(--bg-col);
 }
@@ -34,27 +50,33 @@ body.light {
 --bg-message: white;
 --bg-btn: #4a47d3;
 --bord-col: white;
+--bg-btn-message: #4a47d3;
 }
 
 .text-col {
-    color: var(--text-col);
+color: var(--text-col);
 }
 .bg-col {
-    background-color: var(--bg-col);
-    padding: 0;
+background-color: var(--bg-col);
+padding: 0;
 }
 .bg-message{
-    background-color: var(--bg-message);
-    height: 60vh;
-    border: 1px white solid;
-    border-radius: 30px;
+background-color: var(--bg-message);
+border: 1px white solid;
+border-radius: 30px;
 }
 .bg-btn {
-    background-color: var(--bg-btn);
-    height: 15%;
+background-color: var(--bg-btn);
+height: 15%;
 }
 .bord-col {
-    color: white;
+color: white;
+}
+.bg-btn-message {
+    background-color: var(--bg-btn-message);
+    border: 1px #4a47d3 solid;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
 .icon {
@@ -62,19 +84,9 @@ body.light {
     height: 50px;
 }
 
-.content {
-    width: 80%;
-    height: 90vh;
-}
-
-h1 {
-    font-size: 100px;
-}
-p, h1{
-    color: #4a47d3;
-}
-h2 {
-    font-size: 90px;
+.message-img {
+    max-width: 70%;
+    max-height: 70%;
 }
 
 .btn {
@@ -85,7 +97,12 @@ h2 {
     background-color: rgb(152, 191, 255, 0.2);
 }
 
-input {
+.main-container {
+    height: 85%;
+}
+
+
+.mode {
     -webkit-appearance: none;
     appearance: none;
     position: relative;
@@ -97,7 +114,8 @@ input {
     background-image: url(../img/day.jpg);
     background-size:cover;
 }
-input::before {
+
+.mode::before {
     content:"";
     position: absolute;
     top: 0;
@@ -108,9 +126,20 @@ input::before {
     border-radius: 50px;
     margin: 3px;
 }
-input:checked::before {
+
+.mode:checked::before {
     transform: translate(85%);
 }
-input:checked {
+
+.mode:checked {
     background-image: url(../img/night.jpg);
+}
+
+.message-icon {
+    width: 3vh;
+    height: 3vh;
+}
+
+p{
+    font-size: 20px;
 }
